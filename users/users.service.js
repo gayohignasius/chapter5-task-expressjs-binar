@@ -24,7 +24,7 @@ const createUsers = (req, res) => {
 const getUserById = (req, res) => {
   const { userId } = req.params;
   if (res.status(200)) {
-    const selectedUser = listUsers.filter((user) => user.id == userId);
+    const selectedUser = listUsers.find((user) => user.id == userId);
     res.json(selectedUser);
   } else res.json("error when get the data");
 };
